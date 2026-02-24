@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>LEGO Shop Homepage - Variant 1</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LEGO Shop Homepage - Variant 1</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -33,315 +40,399 @@
             },
         }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<!-- Logo & Search -->
-<div class="flex items-center gap-8 flex-1">
-<div class="flex items-center gap-2">
-<div class="w-10 h-10 bg-primary rounded flex items-center justify-center shadow-lg shadow-primary/20">
-<a href="index.html" class="text-white font-black text-xl tracking-tighter hover:text-white">LEGO</a>
-</div>
-</div>
-<div class="hidden md:flex flex-1 max-w-md">
-<div class="relative w-full">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-<span class="material-symbols-outlined text-slate-400">search</span>
-</div>
-<input class="block w-full pl-10 pr-3 py-2 border-none bg-slate-100 dark:bg-slate-800 rounded-full text-sm placeholder-slate-500 focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Find your next set..." type="text"/>
-</div>
-</div>
-</div>
-<!-- Navigation Links -->
-<nav class="hidden lg:flex items-center gap-8 px-8">
-<a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="plp.html">Star Wars</a>
-<a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="plp.html">City</a>
-<a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="plp.html">Technic</a>
-<a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="plp.html">Icons</a>
-</nav>
-<!-- Icons/Actions -->
-<div class="flex items-center gap-3">
-<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
-<span class="material-symbols-outlined">person</span>
-</button>
-<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
-<span class="material-symbols-outlined">shopping_cart</span>
-<span class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
-</button>
-<button class="md:hidden p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</div>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative overflow-hidden pt-6 pb-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="relative rounded-xl overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center group">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Epic LEGO Star Wars Millennium Falcon space scene" style="background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZt_5wP7mchSw6hXKAcdFIPcPIiMPfMz4htaqFzm3404pGFsJhuD1T9qmWbxOt3fpScoHRsMnCJypd86yJksYfKmckp0vBGIop8cIuQZl_CVNbY6TaIz9QbzxUzujMTL2NDIH1V0jLDlKxr8ZlqMUhG0Ho2lhC61sz3vltMU2A6MoYfbBNCa1E7jN9mFVwTsReZDbITBn_BwrCWk-1n3OF_bGffjfePh5Msqz2dkmPVvl-SOjeuKQGKuCWIdNhFOvnkgVyKX7G1g');">
-</div>
-<div class="relative z-10 px-8 md:px-20 max-w-2xl">
-<span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Collector's Edition</span>
-<h1 class="text-white text-5xl md:text-7xl font-black leading-none mb-6">
-                            Millennium Falcon<sup class="text-2xl">™</sup>
-</h1>
-<p class="text-slate-200 text-lg md:text-xl mb-8 leading-relaxed">
-                            Relive the Star Wars saga with the most iconic ship in the galaxy. Over 7,500 pieces of pure building joy.
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Search -->
+                <div class="flex items-center gap-8 flex-1">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="w-10 h-10 bg-primary rounded flex items-center justify-center shadow-lg shadow-primary/20">
+                            <a href="index.html"
+                                class="text-white font-black text-xl tracking-tighter hover:text-white">LEGO</a>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex flex-1 max-w-md">
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="material-symbols-outlined text-slate-400">search</span>
+                            </div>
+                            <input
+                                class="block w-full pl-10 pr-3 py-2 border-none bg-slate-100 dark:bg-slate-800 rounded-full text-sm placeholder-slate-500 focus:ring-2 focus:ring-primary/50 transition-all"
+                                placeholder="Find your next set..." type="text" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8 px-8">
+                    <a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="plp.html">Star Wars</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="plp.html">City</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="plp.html">Technic</a>
+                    <a class="text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider"
+                        href="plp.html">Icons</a>
+                </nav>
+                <!-- Icons/Actions -->
+                <div class="flex items-center gap-3">
+                    <button
+                        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                    <button
+                        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span
+                            class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+                    </button>
+                    <button class="md:hidden p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-6 pb-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-xl overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center group">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Epic LEGO Porsche 911"
+                        style="background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVIRBMzFnAnkMiLmkfPU1wnFPM_yCZhN_RmrmyRRGqGj7-bUdmfiWQWQEsXIQ88X3FMiZoK5y-j2-CBaCsKXDg8hH1VpcLwJlxBwFHb5Frq41qnmHq7MN9pRLxNQcTkLnplNkYIQaGmSwkVT0gi2kAw3FxoDVTcYSkhYHmi_8mTkYOsCTiGyJ6dQE6gyUZV8tQ1IKPR1arEsv_X2dzn94Q8HDeKB0oKG0sHmqQynGKQ4K3AQQDF7JbKVvOeM-i_fu5L893tbKeQw');">
+                    </div>
+                    <div class="relative z-10 px-8 md:px-20 max-w-2xl">
+                        <span
+                            class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Icons</span>
+                        <h1 class="text-white text-5xl md:text-7xl font-black leading-none mb-6">
+                            Porsche 911<sup class="text-2xl">™</sup>
+                        </h1>
+                        <p class="text-slate-200 text-lg md:text-xl mb-8 leading-relaxed">
+                            Celebrate the unmistakable style of Porsche with this fantastic building challenge. Build
+                            either the Turbo or Targa model.
                         </p>
-<div class="flex flex-wrap gap-4">
-<a href="plp.html" class="bg-lego-yellow hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-extrabold text-lg transition-all shadow-xl shadow-yellow-500/20 active:scale-95 inline-block text-center">
+                        <div class="flex flex-wrap gap-4">
+                            <a href="plp.html"
+                                class="bg-lego-yellow hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-extrabold text-lg transition-all shadow-xl shadow-yellow-500/20 active:scale-95 inline-block text-center">
                                 Shop Now
                             </a>
-<a href="pdp.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg transition-all inline-block text-center">
+                            <a href="pdp.html"
+                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg transition-all inline-block text-center">
                                 View Details
                             </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Shop by Theme -->
-<section class="py-12 bg-white dark:bg-background-dark/50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-end justify-between mb-10">
-<div>
-<h2 class="text-3xl font-black text-slate-900 dark:text-white">Shop by Theme</h2>
-<div class="h-1.5 w-20 bg-primary mt-2 rounded-full"></div>
-</div>
-<a class="text-primary font-bold hover:underline flex items-center gap-1" href="plp.html">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Shop by Theme -->
+        <section class="py-12 bg-white dark:bg-background-dark/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-end justify-between mb-10">
+                    <div>
+                        <h2 class="text-3xl font-black text-slate-900 dark:text-white">Shop by Theme</h2>
+                        <div class="h-1.5 w-20 bg-primary mt-2 rounded-full"></div>
+                    </div>
+                    <a class="text-primary font-bold hover:underline flex items-center gap-1" href="plp.html">
                         View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<!-- Theme Card 1 -->
-<div class="group cursor-pointer">
-<div class="aspect-square rounded-xl bg-lego-blue/10 overflow-hidden mb-4 relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="LEGO Star Wars theme collection" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAw2Cfg0CBm5qzWor1S7XlpdkGuCXYBABmNZgpUI4BagrY-MajalUh6cr5yNd0zRAu_Ch4x5R0SOKZmlLtOCltluNxz4YtX5msepwqIlylNFnScZqMwux0IlqURnEFf9ogOqVjvPcAvyJZvlN3SeYUO2uzBUiwWnhipSSdfCPa4gA2FHBLwWZZPv2_EZBo3H8VJP_BmP1ZQ8BFPc0NZqd4YAgvzxu9Iim7B9tL3jHDAlTzT2YdEL07RXMAfDKmQZNJJZResBGE1mQ');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-<div class="absolute bottom-4 left-4">
-<a href="plp.html" class="text-white font-black text-xl hover:text-white before:absolute before:inset-0">Star Wars</a>
-</div>
-</div>
-</div>
-<!-- Theme Card 2 -->
-<div class="group cursor-pointer">
-<div class="aspect-square rounded-xl bg-primary/10 overflow-hidden mb-4 relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="LEGO City theme collection" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxi2MEy8kPBcb4K1l5ndcv64Adz1YXloiBGnUjLuOn2KD74W_IfoO5am9ClxD9Wu3KaeU16fsY3NQQ5QihS9zt0qpI1pe_lKgVtTKBQtOgefA_C7w1PwTJtMzmuVnKZMvQ7xQY8I2GcOaPGuODXizLThnUdgzzzfd4JMgbr5jz_jE9W4eUFHTCFn0gETKL3-2p5JxFeNoy6YZO-QeYOeUSUw_Gw3X0utt6bKd5UUukIHx61I_XAXXmDyzRkWATAPRiguE0P8b8MQ');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-<div class="absolute bottom-4 left-4">
-<p class="text-white font-black text-xl">City</p>
-</div>
-</div>
-</div>
-<!-- Theme Card 3 -->
-<div class="group cursor-pointer">
-<div class="aspect-square rounded-xl bg-lego-yellow/10 overflow-hidden mb-4 relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="LEGO Technic theme collection" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxubpKqGn4qroZgc1V4wjzAZ4ENx5ZK5UP8m0DG1hpoNpsMpOfTLGNgwSVmqBSG2tVGrvf3QHjrEa2_lO7tYcWhMSFfUxDple0nPcNb1BmRSbPhSZ_okORN8JDgG7SjH7V3dXM6-_xhGvePAk3-9lmvGpiAFuOe7Y9J35NwQrbRaKzPIYE7tD8dK58sZ1_p2tie0yeKyCYXfYmFBrkxPBI-wNjZpzHcFL5NjPqZpA2NUxuKMzyuW_t4tZfwuzKrno80TkOI3HnVQ');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-<div class="absolute bottom-4 left-4">
-<p class="text-white font-black text-xl">Technic</p>
-</div>
-</div>
-</div>
-<!-- Theme Card 4 -->
-<div class="group cursor-pointer">
-<div class="aspect-square rounded-xl bg-green-500/10 overflow-hidden mb-4 relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="LEGO Ninjago theme collection" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfvhdBYFdsiz09MXgY2PuQI15AQpDU55JIu4GBYKV5WqzvkCQhAJOh1Ey1a7vaFGgt7l0hr_eIDQF1_62HexAK_rq1ldHig5LMsuzf1H7sbE8K5zNXEintt1U0EMT6GwsqkSXDQihgLewSSDtVfTMSz6r1vEAmYZoQyfrIToJlxPg3-4-f5IOoZa9e1N4xU1oeNHrX9Nb-GVZkRHDknE3SAjvXf2iQ7lV399EqtN4Px5XQzfDrS2qWS6RG6IBmKcsqM_MlIK1KQw');"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-<div class="absolute bottom-4 left-4">
-<p class="text-white font-black text-xl">Ninjago</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Trending Sets -->
-<section class="py-16">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between mb-12">
-<h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Trending Sets</h2>
-<div class="flex gap-2">
-<button class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-<span class="material-symbols-outlined">chevron_left</span>
-</button>
-<button class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-<span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Product Card 1 -->
-<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
-<div class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
-<div class="absolute top-2 right-2 z-10">
-<button class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-xl">favorite</span>
-</button>
-</div>
-<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="LEGO Icons Porsche 911 Turbo and Targa" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVIRBMzFnAnkMiLmkfPU1wnFPM_yCZhN_RmrmyRRGqGj7-bUdmfiWQWQEsXIQ88X3FMiZoK5y-j2-CBaCsKXDg8hH1VpcLwJlxBwFHb5Frq41qnmHq7MN9pRLxNQcTkLnplNkYIQaGmSwkVT0gi2kAw3FxoDVTcYSkhYHmi_8mTkYOsCTiGyJ6dQE6gyUZV8tQ1IKPR1arEsv_X2dzn94Q8HDeKB0oKG0sHmqQynGKQ4K3AQQDF7JbKVvOeM-i_fu5L893tbKeQw');"></div>
-</div>
-<div class="flex-grow">
-<p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">LEGO® Icons</p>
-<h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2"><a href="pdp.html" class="hover:text-primary hover:underline before:absolute before:inset-0">Porsche 911 Turbo and Targa</a></h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">1,458 Pieces • 18+</p>
-</div>
-<div class="flex items-center justify-between mt-auto">
-<span class="text-2xl font-black text-slate-900 dark:text-white">$169.99</span>
-<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
-<div class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
-<div class="absolute top-2 right-2 z-10">
-<button class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-xl">favorite</span>
-</button>
-</div>
-<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="LEGO Architecture Taj Mahal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgXd-B5fZP8s3Axvx6c4FiAGgMyfBOiKft0Zn4miT2-ZmOQi8et1OmyzauHo35_mUlv9MkWpnUbkeftkhH-ziTWh4tbzbVbV9qML1pyXYuste-yCHRYQVeV4laPxu97Ij4FZlmhjnxfH1M136nyWMeYavx-migdoJvkJj8_PXB4cmYCz8wM02lR_ITIuEQ9-72NERSAKJ8ymLjWJWE-R9BY59c5H-BWz5L_epyYtbmk-SNuqpexz_rAQZ4k3YpeU2PlznTUKwLTQ');"></div>
-</div>
-<div class="flex-grow">
-<p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">Architecture</p>
-<h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2">Taj Mahal Landmark Model</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">2,022 Pieces • 18+</p>
-</div>
-<div class="flex items-center justify-between mt-auto">
-<span class="text-2xl font-black text-slate-900 dark:text-white">$119.99</span>
-<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
-<div class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
-<div class="absolute top-2 right-2 z-10">
-<button class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-xl">favorite</span>
-</button>
-</div>
-<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="LEGO Technic Bugatti Chiron" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8g2qsj73EZ8Xj3NATOtCNL-Bcwh_cOqP28FIG45BzL4hdgsMUCZmfZ2FUOlO9j7qD2-BYQzg2YBGJVMOq1-yWYJxaknlLujTg3q69_FE2B15N9rdu3XLi44QPIF2rHOZA71pobmYUyzEHLp109onz4dcviarbaZxbG4u-O3-QUJA5DAt9J0X2JbozNHx9qIK_Pafy1LDx9ig76HvbQCSlYVSQS1NglnmQFCfRMwx5MQJ5L89Kyf9PHvOP1YdPjVB5xo2aAbR0Fw');"></div>
-</div>
-<div class="flex-grow">
-<p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">Technic™</p>
-<h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2">Bugatti Chiron Ultimate</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">3,599 Pieces • 16+</p>
-</div>
-<div class="flex items-center justify-between mt-auto">
-<span class="text-2xl font-black text-slate-900 dark:text-white">$349.99</span>
-<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-<!-- Product Card 4 -->
-<div class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
-<div class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
-<div class="absolute top-2 right-2 z-10">
-<button class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-xl">favorite</span>
-</button>
-</div>
-<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="LEGO NASA Apollo 11 Lunar Lander" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAERd0GMes3gcGCdzTVcqeL6QIi3TUEjx131iii--8NiXG5oafcQ-4IcOuBY8qVdCcAzu_6Dyj1C1WRJjH0py3wZalkGnAKi69xPXHWH8WZ6IeKqHfQL3-RTN1_WB1DJ9dgNSiivB8QSPUxmsCcv-e7pcZYPbsFQSooH-cJnsNWr4jkTh378i5Ev0YLUHj8ggLu39lSyw1AyYXkzpqxAZSl-38NZfTqUSY7j7m5Wn0V2l0N2vGCQPcGJVuX4xIwfKxRAxmXwaB_Vw');"></div>
-</div>
-<div class="flex-grow">
-<p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">Creator Expert</p>
-<h3 class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2">NASA Apollo 11 Lunar Lander</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">1,087 Pieces • 16+</p>
-</div>
-<div class="flex items-center justify-between mt-auto">
-<span class="text-2xl font-black text-slate-900 dark:text-white">$99.99</span>
-<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Dynamic Promo Banner -->
-<section class="pb-16 px-4">
-<div class="max-w-7xl mx-auto rounded-xl bg-lego-blue p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
-<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-<div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-<div class="flex-1 relative z-10 text-center md:text-left">
-<h2 class="text-3xl md:text-4xl font-black text-white mb-4">Join LEGO® Insiders</h2>
-<p class="text-blue-100 text-lg mb-6">Earn points on every purchase and unlock exclusive rewards, early access to new sets, and member-only gifts.</p>
-<button class="bg-white text-lego-blue px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-all">Join for Free</button>
-</div>
-<div class="w-full md:w-1/3 flex justify-center relative z-10">
-<div class="w-32 h-32 bg-lego-yellow rounded-xl rotate-12 shadow-2xl flex items-center justify-center">
-<span class="material-symbols-outlined text-lego-blue text-6xl">stars</span>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-slate-900 text-slate-400 py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-<div class="col-span-2 lg:col-span-1">
-<div class="w-10 h-10 bg-primary rounded flex items-center justify-center mb-6">
-<span class="text-white font-black text-xl tracking-tighter">LEGO</span>
-</div>
-<p class="text-sm leading-relaxed">Play is at the heart of everything we do. Building the builders of tomorrow since 1932.</p>
-</div>
-<div>
-<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">About Us</h4>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Our Brand</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Sustainability</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Press Room</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Support</h4>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Replacement Parts</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Shipping &amp; Returns</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Explore</h4>
-<ul class="space-y-2 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Catalogues</a></li>
-<li><a class="hover:text-white transition-colors" href="#">LEGO Life</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Find a Store</a></li>
-</ul>
-</div>
-<div class="col-span-2 md:col-span-4 lg:col-span-1">
-<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Subscribe</h4>
-<div class="flex">
-<input class="bg-slate-800 border-none rounded-l-lg w-full text-sm focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
-<button class="bg-primary text-white px-4 rounded-r-lg hover:bg-primary/90">
-<span class="material-symbols-outlined">send</span>
-</button>
-</div>
-</div>
-</div>
-<div class="pt-8 border-t border-slate-800 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
-<p>© 2024 The LEGO Group. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Cookies</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Use</a>
-</div>
-</div>
-</div>
-</footer>
-</body></html>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Theme Card 1 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square rounded-xl bg-lego-blue/10 overflow-hidden mb-4 relative">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="LEGO Star Wars theme collection"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAw2Cfg0CBm5qzWor1S7XlpdkGuCXYBABmNZgpUI4BagrY-MajalUh6cr5yNd0zRAu_Ch4x5R0SOKZmlLtOCltluNxz4YtX5msepwqIlylNFnScZqMwux0IlqURnEFf9ogOqVjvPcAvyJZvlN3SeYUO2uzBUiwWnhipSSdfCPa4gA2FHBLwWZZPv2_EZBo3H8VJP_BmP1ZQ8BFPc0NZqd4YAgvzxu9Iim7B9tL3jHDAlTzT2YdEL07RXMAfDKmQZNJJZResBGE1mQ');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <a href="plp.html"
+                                    class="text-white font-black text-xl hover:text-white before:absolute before:inset-0">Star
+                                    Wars</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Theme Card 2 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square rounded-xl bg-primary/10 overflow-hidden mb-4 relative">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="LEGO City theme collection"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxi2MEy8kPBcb4K1l5ndcv64Adz1YXloiBGnUjLuOn2KD74W_IfoO5am9ClxD9Wu3KaeU16fsY3NQQ5QihS9zt0qpI1pe_lKgVtTKBQtOgefA_C7w1PwTJtMzmuVnKZMvQ7xQY8I2GcOaPGuODXizLThnUdgzzzfd4JMgbr5jz_jE9W4eUFHTCFn0gETKL3-2p5JxFeNoy6YZO-QeYOeUSUw_Gw3X0utt6bKd5UUukIHx61I_XAXXmDyzRkWATAPRiguE0P8b8MQ');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <p class="text-white font-black text-xl">City</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Theme Card 3 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square rounded-xl bg-lego-yellow/10 overflow-hidden mb-4 relative">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="LEGO Technic theme collection"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxubpKqGn4qroZgc1V4wjzAZ4ENx5ZK5UP8m0DG1hpoNpsMpOfTLGNgwSVmqBSG2tVGrvf3QHjrEa2_lO7tYcWhMSFfUxDple0nPcNb1BmRSbPhSZ_okORN8JDgG7SjH7V3dXM6-_xhGvePAk3-9lmvGpiAFuOe7Y9J35NwQrbRaKzPIYE7tD8dK58sZ1_p2tie0yeKyCYXfYmFBrkxPBI-wNjZpzHcFL5NjPqZpA2NUxuKMzyuW_t4tZfwuzKrno80TkOI3HnVQ');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <p class="text-white font-black text-xl">Technic</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Theme Card 4 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square rounded-xl bg-green-500/10 overflow-hidden mb-4 relative">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="LEGO Ninjago theme collection"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfvhdBYFdsiz09MXgY2PuQI15AQpDU55JIu4GBYKV5WqzvkCQhAJOh1Ey1a7vaFGgt7l0hr_eIDQF1_62HexAK_rq1ldHig5LMsuzf1H7sbE8K5zNXEintt1U0EMT6GwsqkSXDQihgLewSSDtVfTMSz6r1vEAmYZoQyfrIToJlxPg3-4-f5IOoZa9e1N4xU1oeNHrX9Nb-GVZkRHDknE3SAjvXf2iQ7lV399EqtN4Px5XQzfDrS2qWS6RG6IBmKcsqM_MlIK1KQw');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <p class="text-white font-black text-xl">Ninjago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Trending Sets -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">Trending
+                        Sets</h2>
+                    <div class="flex gap-2">
+                        <button
+                            class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
+                            <div class="absolute top-2 right-2 z-10">
+                                <button
+                                    class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">favorite</span>
+                                </button>
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="LEGO Icons Porsche 911 Turbo and Targa"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVIRBMzFnAnkMiLmkfPU1wnFPM_yCZhN_RmrmyRRGqGj7-bUdmfiWQWQEsXIQ88X3FMiZoK5y-j2-CBaCsKXDg8hH1VpcLwJlxBwFHb5Frq41qnmHq7MN9pRLxNQcTkLnplNkYIQaGmSwkVT0gi2kAw3FxoDVTcYSkhYHmi_8mTkYOsCTiGyJ6dQE6gyUZV8tQ1IKPR1arEsv_X2dzn94Q8HDeKB0oKG0sHmqQynGKQ4K3AQQDF7JbKVvOeM-i_fu5L893tbKeQw');">
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">LEGO® Icons</p>
+                            <h3
+                                class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2">
+                                <a href="pdp.html"
+                                    class="hover:text-primary hover:underline before:absolute before:inset-0">Porsche
+                                    911 Turbo and Targa</a></h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">1,458 Pieces • 18+</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-2xl font-black text-slate-900 dark:text-white">$169.99</span>
+                            <button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
+                            <div class="absolute top-2 right-2 z-10">
+                                <button
+                                    class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">favorite</span>
+                                </button>
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="LEGO Architecture Taj Mahal"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgXd-B5fZP8s3Axvx6c4FiAGgMyfBOiKft0Zn4miT2-ZmOQi8et1OmyzauHo35_mUlv9MkWpnUbkeftkhH-ziTWh4tbzbVbV9qML1pyXYuste-yCHRYQVeV4laPxu97Ij4FZlmhjnxfH1M136nyWMeYavx-migdoJvkJj8_PXB4cmYCz8wM02lR_ITIuEQ9-72NERSAKJ8ymLjWJWE-R9BY59c5H-BWz5L_epyYtbmk-SNuqpexz_rAQZ4k3YpeU2PlznTUKwLTQ');">
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">Architecture</p>
+                            <h3
+                                class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2">
+                                Taj Mahal Landmark Model</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">2,022 Pieces • 18+</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-2xl font-black text-slate-900 dark:text-white">$119.99</span>
+                            <button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
+                            <div class="absolute top-2 right-2 z-10">
+                                <button
+                                    class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">favorite</span>
+                                </button>
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="LEGO Technic Bugatti Chiron"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8g2qsj73EZ8Xj3NATOtCNL-Bcwh_cOqP28FIG45BzL4hdgsMUCZmfZ2FUOlO9j7qD2-BYQzg2YBGJVMOq1-yWYJxaknlLujTg3q69_FE2B15N9rdu3XLi44QPIF2rHOZA71pobmYUyzEHLp109onz4dcviarbaZxbG4u-O3-QUJA5DAt9J0X2JbozNHx9qIK_Pafy1LDx9ig76HvbQCSlYVSQS1NglnmQFCfRMwx5MQJ5L89Kyf9PHvOP1YdPjVB5xo2aAbR0Fw');">
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">Technic™</p>
+                            <h3
+                                class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2">
+                                Bugatti Chiron Ultimate</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">3,599 Pieces • 16+</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-2xl font-black text-slate-900 dark:text-white">$349.99</span>
+                            <button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-700">
+                        <div
+                            class="relative aspect-square rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden mb-4">
+                            <div class="absolute top-2 right-2 z-10">
+                                <button
+                                    class="w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">favorite</span>
+                                </button>
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="LEGO NASA Apollo 11 Lunar Lander"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAERd0GMes3gcGCdzTVcqeL6QIi3TUEjx131iii--8NiXG5oafcQ-4IcOuBY8qVdCcAzu_6Dyj1C1WRJjH0py3wZalkGnAKi69xPXHWH8WZ6IeKqHfQL3-RTN1_WB1DJ9dgNSiivB8QSPUxmsCcv-e7pcZYPbsFQSooH-cJnsNWr4jkTh378i5Ev0YLUHj8ggLu39lSyw1AyYXkzpqxAZSl-38NZfTqUSY7j7m5Wn0V2l0N2vGCQPcGJVuX4xIwfKxRAxmXwaB_Vw');">
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-xs font-bold text-primary mb-1 uppercase tracking-wide">Creator Expert</p>
+                            <h3
+                                class="font-bold text-slate-900 dark:text-white text-lg mb-1 leading-tight line-clamp-2">
+                                NASA Apollo 11 Lunar Lander</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">1,087 Pieces • 16+</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto">
+                            <span class="text-2xl font-black text-slate-900 dark:text-white">$99.99</span>
+                            <button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Dynamic Promo Banner -->
+        <section class="pb-16 px-4">
+            <div
+                class="max-w-7xl mx-auto rounded-xl bg-lego-blue p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2">
+                </div>
+                <div class="flex-1 relative z-10 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Join LEGO® Insiders</h2>
+                    <p class="text-blue-100 text-lg mb-6">Earn points on every purchase and unlock exclusive rewards,
+                        early access to new sets, and member-only gifts.</p>
+                    <button
+                        class="bg-white text-lego-blue px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-all">Join
+                        for Free</button>
+                </div>
+                <div class="w-full md:w-1/3 flex justify-center relative z-10">
+                    <div
+                        class="w-32 h-32 bg-lego-yellow rounded-xl rotate-12 shadow-2xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-lego-blue text-6xl">stars</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-1">
+                    <div class="w-10 h-10 bg-primary rounded flex items-center justify-center mb-6">
+                        <span class="text-white font-black text-xl tracking-tighter">LEGO</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Play is at the heart of everything we do. Building the builders
+                        of tomorrow since 1932.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">About Us</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-white transition-colors" href="#">Our Brand</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Sustainability</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Press Room</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Replacement Parts</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Shipping &amp; Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Explore</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-white transition-colors" href="#">Catalogues</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">LEGO Life</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Find a Store</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Subscribe</h4>
+                    <div class="flex">
+                        <input
+                            class="bg-slate-800 border-none rounded-l-lg w-full text-sm focus:ring-1 focus:ring-primary"
+                            placeholder="Email address" type="email" />
+                        <button class="bg-primary text-white px-4 rounded-r-lg hover:bg-primary/90">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-800 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>© 2024 The LEGO Group. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Cookies</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
