@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LEGO Product Listing Page (PLP)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f42525",
+                        "accent-yellow": "#ffcf00",
+                        "accent-blue": "#006cb7",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky-nav bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 shadow-sm">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+<!-- Logo and Search -->
+<div class="flex items-center gap-12 flex-1">
+<div class="flex items-center gap-2">
+<div class="size-10 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white text-3xl">token</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tighter text-primary">LEGO</h1>
+</div>
+<div class="hidden md:flex flex-1 max-w-md relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-full py-2.5 pl-11 pr-4 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Search by theme, set, or piece..." type="text"/>
+</div>
+</div>
+<!-- Nav Links & Icons -->
+<div class="flex items-center gap-8">
+<nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<a class="hover:text-primary transition-colors" href="#">Discover</a>
+<a class="hover:text-primary transition-colors" href="#">Help</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 size-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full font-bold">2</span>
+</button>
+<div class="h-10 w-10 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-cover bg-center" data-alt="User profile avatar icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRmZtqqCN9irUEsnl8AcjQf1NL-vjjhesQn10tbLfzGYtaN0NLQB2hkFip3MbYQL8Top_TfVY663gQLD0igx72CPib0IfMJrmBtNHvMLOFQIJEDcxE6lC4dzAlOdgnYr5yPA1ONK2_dwFJKD2_61S_mkIFZBPyBSaJ_fSOPGfUGuPO5URq2-Pm6lcxeV1Tcs1bFXZArrk0P3BdvSwZoay-u6YCVLWWo7gWcIHMsOyRoZR8ezr-qLRrsmA44Ptm-dbsATn13hJzaA");'></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="max-w-[1440px] mx-auto px-6 lg:px-20 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-8">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Shop</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">Star Wars</span>
+</nav>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 shrink-0 space-y-8">
+<div>
+<h2 class="text-lg font-bold mb-6 flex items-center justify-between">
+                        Filters
+                        <span class="material-symbols-outlined text-slate-400">tune</span>
+</h2>
+<!-- Filter Groups -->
+<div class="space-y-6">
+<!-- Age Range -->
+<div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+<button class="flex items-center justify-between w-full font-semibold text-sm mb-4">
+                                Age Range
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">4+</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors font-medium">9+</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm group-hover:text-primary transition-colors">18+</span>
+</label>
+</div>
+</div>
+<!-- Price -->
+<div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+<button class="flex items-center justify-between w-full font-semibold text-sm mb-4">
+                                Price
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">$0 - $50</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">$50 - $150</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">$150+</span>
+</label>
+</div>
+</div>
+<!-- Theme -->
+<div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+<button class="flex items-center justify-between w-full font-semibold text-sm mb-4">
+                                Theme
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Star Wars</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">LEGO Icons</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">Technic</span>
+</label>
+</div>
+</div>
+<!-- Piece Count -->
+<div class="pb-4">
+<button class="flex items-center justify-between w-full font-semibold text-sm mb-4">
+                                Piece Count
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">0 - 500</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">500 - 1000</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm">1000+</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Section -->
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">Star Wars™</h2>
+<p class="text-slate-500 dark:text-slate-400">Discover iconic ships and characters from the Star Wars universe.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-medium">Sort by:</span>
+<select class="bg-white dark:bg-background-dark border-slate-200 dark:border-slate-800 rounded-full text-sm py-1.5 pl-4 pr-10 focus:ring-primary/20">
+<option>Most Popular</option>
+<option>Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">New</span>
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="Millennium Falcon LEGO set in white box" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPHDvmERIGZ0DhQhdZPTxYGaYfDSUHYwn_m-R5G5GktvhBLQu6FU6FAKNcAfR-sMr6yIxujcsyL3abrh5W5YjW_GWX5V3XzEU9SXto9jGqFQz9kv10wB60nsgNRrCUoMz8GUKqe-J-bDzXB8Wfz0rEn6VTg5BppwGwK-ZvLLLuro2XxwJbdC0vE_enk2E4nQTnFqdHzKBsUTtlnIH8z2n4iHykVyw26rPy4BMiEVU6nLsIDNTnbnOqGT-VSQUnKQMyx5rvHl1yPQ");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.9</span>
+<span class="text-xs text-slate-400 font-medium">(1.2k)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Millennium Falcon™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75192 • 7541 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$169.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<span class="absolute top-4 left-4 bg-accent-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Featured</span>
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="X-Wing Starfighter LEGO set in white box" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNLjP_TqLlaFMe7EhyHWYc2-WSVXR1TBBW98assLqp-vwUXfTQw1rwl-ldxrigYqWatlDll4Uwt2YTjyozPwhbMnWmVvFH-Sar5ahZUOFeZEGo-KeezIbIs_Iy9cuZzgRePzQZerO7wok0vx0sAjGw0R2_j7BaqDHnXq9tX-dvjHmtDHk5HCS1SPXuCU_Rt1xFLgq7WICJ61ksj1BA63hJwN5Q47zW3VYfrMzO6PONXYhTCIucrbJT0_idFtbjOYno_Lv20QS2Zw");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.8</span>
+<span class="text-xs text-slate-400 font-medium">(842)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">X-Wing Starfighter™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75355 • 1949 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$49.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Sale</span>
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="Imperial Star Destroyer LEGO set in white box" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKhM1dhWCFOPPYi7tAR5Zp5eezE3ETAFly-jxkd1K9Lac0s8IJwANA5VAegaPaypWsZwntPFGr5IBdClKhOU5j6Srk-DChzBd2eubKd5wYpnWNLA6UJyatFrhyF-hQydVzXjxW7dUZ6xYxtrxNv8G7YHSBr6y7IWU-tJWsFYgNUK3c3Uw8qjQy5nCbA9VI1DrolZmEjDFGPTlZLRBU1l_tILsKpEGiGj1V6EJ6JFnamdWCu0L8BM9UQgDtTae61BQPjGKtrmQP_Q");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">5.0</span>
+<span class="text-xs text-slate-400 font-medium">(56)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Imperial Star Destroyer™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75252 • 4784 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$699.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<!-- Additional Grid Placeholder Cards (Repeated Pattern) -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="TIE Fighter LEGO set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKJBwqTVsI9rytli7ZwkckJ9NuQJfwbG0bvMoSdV4T7k67Z_T-84T8BsMBUU-lRP5kuZc4xMwVgOSZ109r2_EAXSnQbPf68BUtd6UWfT1mVdQD5cwXlmS9n5qk8tPxpMm3wYXwrdVNubUCWwsxFpTgsXqV-bGdInRGURYpe85ZYtH57zXChm8QbdkVELXQiZzR0jcJfmyNEJ1_9NO_9-P94d6W8d7SqWuJuwm6-HzFDqVzbKHtrubPWo4YbQIKM4kw2rpXPcMe2Q");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.6</span>
+<span class="text-xs text-slate-400 font-medium">(231)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">TIE Fighter™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75300 • 432 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$44.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="Razor Crest LEGO set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVQauVeHplIAj1K3RPOVz3n2LC2hsjWoL1mk0c0ROq0WYcxBbfXvZKS6zXT_XhF6UL97hPCHEUqs0MBsPESdlr9VH7K7sw53HexVCJfV_4Je0tWfwo6UW994Oh89VwiTpQmXB8lKZMSeTqtD4Cq3Y5o3PoBB6wprdYsMZ9EmOh3i-sll9mLbuFL-yjcKjDduSr1VUFIV1BFlbaExwi4FyaobxHDmAbRxWC4Q19M6D7Z1KqZqju7H4bJQS62HPxzVprJ4CjsU3rJQ");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.8</span>
+<span class="text-xs text-slate-400 font-medium">(1.1k)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Razor Crest™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75331 • 6187 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$599.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="Luke's Landspeeder LEGO set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB67DwSbbLfULsKSCzTDeDjJPCg_f1DuK-h4SPfeNJZtzZmevvvJiEGmsrSVY9LIh1BNpojHSy_9vRv44jHbby3DkUZcsWcFBuCs-KhrOK4urzK19WQQFjy4WOWf1kTuLZxhWgvD5ZgNdM9BKagCQoRDuYktd1wnKR6FjS7QBn_GEyMx9hEoU0-zeAFWPOx2jowrxoY_FwzOay4B0M92u1cjkC2_Z0ceUEcjUs9tyCAAkBzv348Hp8mASwkJxT5hhJMrtktA27M8A");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.9</span>
+<span class="text-xs text-slate-400 font-medium">(432)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Luke's Landspeeder™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75341 • 1890 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$199.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="AT-AT Walker LEGO set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgUVEcgPneLE-vUyaX_XmULq2RN6G6Mp1fQB0T7rS8QOf-WsT9G94hQjawJ49UABTZ2lH9guksM9OGrfjHnu8wJMjedFq6JFq2Nrq1axg3a_9yUDx6GZ7v5r867O8tHOd8pRuq1x_ZTpfyxKBJ5seM_wsbB0C7XAjAqSsPfYK0olNGwmYj7HEYqpMs6qaNWkHxQdO8iYwUMPdJ8PExOrKoUMxV2DviJwoiQMQPiXdtRw-Sput8wh9jOOCbwAWLfrPVdUh7n_00yA");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">5.0</span>
+<span class="text-xs text-slate-400 font-medium">(921)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">AT-AT Walker™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75313 • 6785 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$799.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="Boba Fett Helmet LEGO set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNmOrECQMjtgSlqeWNVCppeAWRGodMag3ufyRYRdBM1QlG5C9zOfvBuV2BrERPlYnDBzunfQV02ILB9k1O49zEMkAvU3kLX7I0JDRzPuYUkefAMLEKF2dWZpHTaJg2rQfTQYPAYHzlH5uZwXzHEt7fP8CKx30M9cI2LPNCSAv2zuypVbsNPNlRXgd_0GlHJ4Pt19PT1y6KFhmLQcjW1kKvT2LoETlVsMql3XmreDhN__aMDIUgYqZZE101eGpHbuS-NTGTpjOXZg");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.7</span>
+<span class="text-xs text-slate-400 font-medium">(1.5k)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Boba Fett Helmet™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75277 • 625 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$69.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square bg-slate-50 dark:bg-slate-800 flex items-center justify-center p-6">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105" data-alt="Death Star Trench Run LEGO set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUxozpxB2UT5pMfvALi8AOB1TpiovxFhGegxTVz2Zxsz2wdwizZrcV3b_ftu9eLormo0aujkuFS7vuNc3HjzI0vDY14rZR7obwtcw-73Ydpj8xqknz33Y9Gnxo5-zjCCmIBU-7LIrDf99m4_UtG6UMr9frqCfu72WHmIJ0EVFO9vftPgLUaIxQDM-DWkygDnI9DykYXZjDLTN5f1DAE9S2d251v1m1AJYp8Hob6OdpsG00APrQgXoLF5zDQZ3P-fuFgTbBayPl6Q");'></div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-accent-yellow text-sm fill-1">star</span>
+<span class="text-xs font-bold">4.8</span>
+<span class="text-xs text-slate-400 font-medium">(312)</span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Death Star Run™</h3>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-4">Set 75329 • 665 Pieces</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50 dark:border-slate-800">
+<span class="text-xl font-extrabold text-primary">$69.99</span>
+<button class="bg-accent-yellow hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2.5 rounded-full flex items-center gap-2 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span>
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<nav class="mt-16 flex items-center justify-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full bg-primary text-white font-bold">1</button>
+<button class="size-10 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">2</button>
+<button class="size-10 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="size-10 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-bold">Next</button>
+</nav>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-background-dark/50 border-t border-slate-200 dark:border-slate-800 mt-20 py-12 px-6 lg:px-20">
+<div class="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="size-8 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-white text-xl">token</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter text-primary">LEGO</h2>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs leading-relaxed">Building a brighter future, one brick at a time. The LEGO Group is committed to inspiring the builders of tomorrow.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Support</h4>
+<ul class="text-sm space-y-3 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary" href="#">Find Building Instructions</a></li>
+<li><a class="hover:text-primary" href="#">Replacement Parts</a></li>
+<li><a class="hover:text-primary" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Discover</h4>
+<ul class="text-sm space-y-3 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary" href="#">LEGO Insider</a></li>
+<li><a class="hover:text-primary" href="#">LEGO Stores</a></li>
+<li><a class="hover:text-primary" href="#">LEGO Catalogues</a></li>
+<li><a class="hover:text-primary" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Subscribe</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Get early access to exclusive sets and offers.</p>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-slate-800 border-none rounded-full px-4 py-2 text-sm flex-1" placeholder="Your email" type="email"/>
+<button class="bg-primary text-white rounded-full px-4 py-2 font-bold text-sm">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<p>© 2024 The LEGO Group. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<a class="hover:underline" href="#">Cookies</a>
+<a class="hover:underline" href="#">Legal Notice</a>
+<a class="hover:underline" href="#">Terms of Use</a>
+</div>
+</div>
+</footer>
+</body></html>
